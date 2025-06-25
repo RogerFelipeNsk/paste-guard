@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "Paste Guard"
+  },
+  "extensionDescription": {
+    "message": "Previne colar dados sensíveis como senhas e chaves de API."
+  },
+  "pasteWarning": {
+    "message": "🚨 O texto colado pode conter dados sensíveis (senhas, chaves, etc). Deseja continuar?"
+  }
+}

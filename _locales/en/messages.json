@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "Paste Guard"
+  },
+  "extensionDescription": {
+    "message": "Prevents pasting sensitive data like passwords and API keys."
+  },
+  "pasteWarning": {
+    "message": "🚨 The pasted text may contain sensitive data (passwords, keys, etc). Do you want to continue?"
+  }
+}

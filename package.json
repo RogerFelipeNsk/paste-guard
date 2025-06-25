@@ -1,0 +1,30 @@
+{
+  "name": "paste-guard",
+  "version": "1.0.0",
+  "description": "Extensão para prevenir vazamento de dados sensíveis",
+  "scripts": {
+    "build": "./build.sh",
+    "watch": "./watch.sh",
+    "clean": "rm -rf build dist",
+    "validate": "find . -name '*.json' -exec echo 'Validando {}' \\; -exec jq empty {} \\;",
+    "dev": "echo 'Carregue a pasta atual no chrome://extensions/ em modo desenvolvedor'",
+    "zip": "npm run build && echo 'Arquivo ZIP criado em ./dist/'",
+    "version:patch": "npm version patch && npm run build",
+    "version:minor": "npm version minor && npm run build",
+    "version:major": "npm version major && npm run build"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rogerfelipensk/paste-guard"
+  },
+  "keywords": [
+    "chrome-extension",
+    "security",
+    "privacy",
+    "paste-guard",
+    "credentials"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT"
+}
