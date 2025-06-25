@@ -13,7 +13,8 @@
     "version:minor": "npm version minor && npm run build",
     "version:major": "npm version major && npm run build",
     "security-check": "./security-check.sh",
-    "pre-commit": "npm run security-check && npm run validate"
+    "pre-commit": "npm run security-check && npm run validate",
+    "deploy": "./deploy.sh"
   },
   "devDependencies": {},
   "repository": {
