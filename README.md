@@ -23,6 +23,12 @@ npm run clean
 # Validação de arquivos JSON
 npm run validate
 
+# Verificação de segurança (antes do commit)
+npm run security-check
+
+# Verificação completa (segurança + validação)
+npm run pre-commit
+
 # Atualização de versão automática
 npm run version:patch   # 1.0.0 -> 1.0.1
 npm run version:minor   # 1.0.0 -> 1.1.0
@@ -88,3 +94,24 @@ paste-guard/
 - Português (pt)
 
 Para adicionar novos idiomas, crie uma pasta em `_locales/[código-idioma]/` com o arquivo `messages.json`.
+
+## 🔐 Segurança
+
+Este projeto inclui verificações automáticas de segurança para evitar vazamento de credenciais:
+
+- **Script de verificação**: `./security-check.sh`
+- **Comando rápido**: `npm run security-check`
+- **Verificação completa**: `npm run pre-commit`
+
+### Antes de fazer commit:
+
+```bash
+npm run pre-commit
+```
+
+Isso verifica:
+- ✅ Arquivos sensíveis (.pem, .key, .env, etc.)
+- ✅ Padrões de API keys e tokens no código
+- ✅ Configuração do .gitignore
+- ✅ TODOs/FIXMEs suspeitos
+- ✅ Validação de arquivos JSON

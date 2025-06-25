@@ -1,6 +1,6 @@
 {
   "name": "paste-guard",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Extensão para prevenir vazamento de dados sensíveis",
   "scripts": {
     "build": "./build.sh",
@@ -11,7 +11,9 @@
     "zip": "npm run build && echo 'Arquivo ZIP criado em ./dist/'",
     "version:patch": "npm version patch && npm run build",
     "version:minor": "npm version minor && npm run build",
-    "version:major": "npm version major && npm run build"
+    "version:major": "npm version major && npm run build",
+    "security-check": "./security-check.sh",
+    "pre-commit": "npm run security-check && npm run validate"
   },
   "devDependencies": {},
   "repository": {
@@ -25,6 +27,6 @@
     "paste-guard",
     "credentials"
   ],
-  "author": "Seu Nome",
+  "author": "Roger Felipe",
   "license": "MIT"
 }

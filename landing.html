@@ -115,9 +115,16 @@
         ${t.features.map((f) => `<li>✔️ ${f}</li>`).join("")}
       </ul>
 
-      <button onclick="window.open('https://chrome.google.com/webstore/detail/paste-guard/EXTENSION_ID', '_blank')">
+      <button onclick="window.open('https://chromewebstore.google.com/detail/paste-guard/gjpamplfjbimemgalnihjlaagpefgjpc', '_blank')" style="display: none;">
         ${t.button}
       </button>
+      
+      <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin-top: 20px;">
+        <p style="margin: 0; color: #1565c0;">
+          📦 <strong>Extensão em desenvolvimento</strong><br>
+          Em breve disponível na Chrome Web Store
+        </p>
+      </div>
     `;
 
       document.getElementById("content").innerHTML = html;
